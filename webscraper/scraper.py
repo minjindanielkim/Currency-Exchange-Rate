@@ -1,13 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 
-r = requests.get('https://www.x-rates.com/table/?from=USD&amount=1#google_vignette')
-soup = BeautifulSoup(r.content, 'html.parser')
-
-s = soup.find('div', id='content')
-lines = s.find_all('tr')
-
 def exchange():
+    r = requests.get('https://www.x-rates.com/table/?from=USD&amount=1#google_vignette')
+    soup = BeautifulSoup(r.content, 'html.parser')
+
+    s = soup.find('div', id='content')
+    lines = s.find_all('tr')
     count = 1
     arr = []
     for line in lines:
