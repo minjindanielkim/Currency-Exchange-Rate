@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Exchange Rates</title>
+</head>
+ 
+<body>
+    <a href="{{url_for('stock')}}">Stock</a>
+    <h2> Top 10 USD Exchange Rates</h2>
+    <h4> Currency, 1 USD to Currency , Currency to USD</h4>
+    
+ <!-- this section can be replaced by a child document -->  
+{% block body %}
+ 
+<ul>
+    {% for rate in rates %}
+    <li>{{rate}}</li>
+    {% endfor %}
+</ul>
+
+
+ 
+ 
+{% endblock %}
+ 
+ 
+</body>
+ 
+</html>

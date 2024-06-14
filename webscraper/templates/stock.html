@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stock</title>
+    </head>
+    <body>
+        <a href="{{url_for('index')}}">Exchange Rates</a>
+        <h2>Stock Market Indicies</h2>
+        {% block body %}
+
+        <ul>
+            {% for stock in stocks %}
+            <li>{{stock}}</li>
+            {% endfor %}
+        </ul>
+        
+
+        {% endblock %}
+
+    </body>
+</html>
