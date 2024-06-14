@@ -10,6 +10,7 @@ rates = scraper.exchange()
 
 stocks = stock.indicies()
 
+
 @app.route("/")
 def index():
     return render_template("index.html", rates=rates)
