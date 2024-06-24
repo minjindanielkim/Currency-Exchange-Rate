@@ -7,19 +7,14 @@ def exchange():
 
     s = soup.find('div', id='content')
     lines = s.find_all('tr')
-    count = 1
     arr = []
     for line in lines:
-        if count == 12:
-            break
-        count += 1
         arr.append(line.text)
 
-    arr.pop(0)
+    newArr = arr[12:]
 
     char = "\n"
     
-    for i, j in enumerate(arr):
-        arr[i] = j.replace(char, " ")
-    
-    return arr
+    for i, j in enumerate(newArr):
+        newArr[i] = j.replace(char, " ")
+    return newArr
