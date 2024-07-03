@@ -9,7 +9,6 @@ def indicies():
     s = soup.find('div', id="list-res-table")
     lines = s.find_all('tr')
     arr = []
-
     for i in lines:
         arr.append(i.text)
     return arr
