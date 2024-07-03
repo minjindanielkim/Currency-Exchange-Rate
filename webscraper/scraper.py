@@ -7,11 +7,11 @@ def exchange():
 
     s = soup.find('div', id='content')
     lines = s.find_all('tr')
-    arr = []
+    temp = []
     for line in lines:
-        arr.append(line.text)
+        temp.append(line.text)
 
-    newArr = arr[12:]
+    newArr = temp[12:]
 
     char = "\n"
     
